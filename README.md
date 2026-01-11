@@ -61,7 +61,7 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
 sudo apt update
 sudo apt install -y eza
 
-# Alternative: lsd via snap (easy)
+# Alternative: lsd via snap (easy) p.s. I hate snaps do what you want
 sudo apt install -y snapd
 sudo snap install lsd
 
