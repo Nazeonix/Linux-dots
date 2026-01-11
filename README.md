@@ -6,7 +6,7 @@ Modern, fast and beautiful terminal configuration for Linux
 ![Terminal screenshot](term.png)  
 
 ## ✨ Features
-- based on old good project Plafon
+- based on old good project PLAFON
 - Powerlevel10k — one of the fastest & most beautiful zsh themes
 - Very fast syntax highlighting (`fast-syntax-highlighting`)
 - Modern icons in `ls` (`eza` & `lsd`)
