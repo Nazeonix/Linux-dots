@@ -3,7 +3,7 @@
 Modern, fast and beautiful terminal configuration for Linux  
 (zsh + Powerlevel10k theme + fast-syntax-highlighting + Alacritty terminal)
 
-![Terminal screenshot](Linux-dots/term.png)  
+![Terminal screenshot](term.png)  
 
 ## ✨ Features
 - based on old good project Plafon
