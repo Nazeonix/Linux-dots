@@ -118,7 +118,7 @@ Dark minimal theme inspired by One Dark / Dracula vibes
 
 - Background:   `#242424`
 - Foreground:   `#ABB2BF`
-- Accent/Cyan:  `#56B6C2`
+- Accent:  `#56B6C2`
 - Purple:       `#C678DD`
 - Green:        `#98C379`
 - Red:          `#E06C75`
