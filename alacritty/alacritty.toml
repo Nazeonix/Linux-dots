@@ -1,0 +1,140 @@
+# ==============================================================================
+# Alacritty Configuration File
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Shell (Оболонка)
+# ------------------------------------------------------------------------------
+# Програма, яка буде запускатися в терміналі.
+# Залишіть за замовчуванням, якщо не розумієте, яку оболонку використовуєте.
+[shell]
+program = "/usr/bin/zsh" # чи "/usr/bin/zsh", "/usr/bin/fish"
+args = ["--login"]
+
+# ------------------------------------------------------------------------------
+# Font (Шрифт)
+# ------------------------------------------------------------------------------
+# Налаштування шрифту.
+[font]
+size = 14.0 # Розмір шрифту в пунктах.
+
+[font.normal]
+family = "FiraCode Nerd Font" # Назва шрифту для звичайного тексту
+style = "Regular"
+
+[font.bold]
+family = "FiraCode Nerd Font" # Назва шрифту для жирного тексту
+style = "Bold"
+
+[font.italic]
+family = "FiraCode Nerd Font" # Назва шрифту для курсиву
+style = "Italic"
+
+[font.bold_italic]
+family = "FiraCode Nerd Font" # Назва шрифту для жирного курсиву
+style = "Bold Italic"
+
+# ------------------------------------------------------------------------------
+# Colors (Схема кольорів)
+# ------------------------------------------------------------------------------
+[colors.primary]
+foreground = "#ABB2BF" # Колір тексту (світло-сірий, схожий на білий)
+#background = "#282C34" # Колір фону (темно-сірий, схожий на темно-синій/чорний)
+background = "#242424" # Колір фону (темно-сірій, схожий на темно-синій/чорний)
+
+[colors.cursor]
+text = "CellBackground" # Колір тексту під курсором
+cursor = "#56B6C2"     # Колір самого курсору (бірюзовий, для прикладу)
+
+[colors.vi_mode_cursor]
+text = "CellBackground"
+cursor = "#E5C07B"
+
+[colors.selection]
+text = "CellForeground"
+background = "#3E4452" # Колір виділеного тексту
+
+# Standard colors (ANSI 0-7)
+[colors.normal]
+black   = "#1E2127" # Темно-сірий
+red     = "#E06C75" # Червоний
+green   = "#98C379" # Зелений
+yellow  = "#418db0" # Жовтий
+blue    = "#6ba0b9" # Синій
+magenta = "#C678DD" # Маджентовий (фіолетовий)
+cyan    = "#56B6C2" # Ціановий (блакитний)
+white   = "#ABB2BF" # Білий (Світло-сірий)
+
+# Bright colors (ANSI 8-15)
+[colors.bright]
+black   = "#5C6370" # Чорний (Світло-сірий)
+red     = "#E06C75" # Червоний
+green   = "#98C379" # Зелений
+yellow  = "#418db0" # Жовтий
+blue    = "#bfe6fb" # Синій
+magenta = "#C678DD" # Маджентовий (фіолетовий)
+cyan    = "#56B6C2" # Ціановий (блакитний)
+white   = "#FFFFFF" # Білий
+
+# ------------------------------------------------------------------------------
+# Window (Вікно)
+# ------------------------------------------------------------------------------
+[window]
+dimensions = { columns = 100, lines = 30 } # Початковий розмір вікна в символах.
+padding = { x = 10, y = 10 }               # відступи від краю вікна до тексту.
+opacity = 0.95                             # Прозорість вікна (0.0 - повністю прозоро, 1.0 - монотонно).
+decorations = "none"                       # Декорація вікна: "full", "none", "buttonless".
+startup_mode = "Windowed"                  # Режим запуску: "Windowed", "Fullscreen", "Maximized".
+dynamic_padding = true                     # Автоматично центрувати текст в вікні.
+
+# ------------------------------------------------------------------------------
+# Cursor (Курсор)
+# ------------------------------------------------------------------------------
+[cursor]
+style = { shape = "Block", blinking = "Off" } # Форма курсору: "Block", "Underline", "Beam". Мигання: "On", "Off", "Sense".
+thickness = 0.15 # Товщина курсора (для "Underline" або "Beam").
+
+# ------------------------------------------------------------------------------
+# Scrolling (Прокрутка)
+# ------------------------------------------------------------------------------
+[scrolling]
+history = 10000 # Кількість строк в буфері прокрутки.
+
+# ------------------------------------------------------------------------------
+# Key Bindings (Гарячі клавіші)
+# ------------------------------------------------------------------------------
+# Користувацькі гарячі клавіші.
+# 'mods': Control, Shift, Alt, Super (клавіша Windows/Command)
+# 'action': Copy, Paste, IncreaseFontSize, DecreaseFontSize, ResetFontSize то що.
+#
+# Важно: для кожної прив'язки клавіш використовуйте [[keyboard.bindings]]
+#
+[[keyboard.bindings]]
+key = "Plus"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "0"
+mods = "Control"
+action = "ResetFontSize"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Control|Shift"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
