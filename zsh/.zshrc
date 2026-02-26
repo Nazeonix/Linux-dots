@@ -1,4 +1,5 @@
 export TERM="xterm-256color"
+export PATH="$PATH:$HOME/.local/bin"
 [[ $XDG_SESSION_DESKTOP == plasma ]] && export KWIN_TRIPLE_BUFFER=1
 
 # Install plugins if missing
@@ -6,6 +7,8 @@ if [[ ! -d ~/.zsh ]]; then
     mkdir -p ~/.zsh
     git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.zsh/fast-syntax-highlighting
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+    curl -s https://ohmyposh.dev/install.sh | bash -s
+    
 fi
 
 # Plugins (autosuggestions → syntax is common order)
