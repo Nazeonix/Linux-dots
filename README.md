@@ -1,13 +1,11 @@
 # My Terminal Setup – Zsh + Powerlevel10k + Alacritty
 
 Modern, fast and beautiful terminal configuration for Linux  
-(zsh + Powerlevel10k theme + fast-syntax-highlighting + Alacritty terminal)
+(zsh + Oh-My-Posh theme + Alacritty terminal)
 
 ![Terminal screenshot](term.png)  
 
 ## ✨ Features
-- based on old good project PLAFON
-- Powerlevel10k — one of the fastest & most beautiful zsh themes
 - Very fast syntax highlighting (`fast-syntax-highlighting`)
 - Modern icons in `ls` (`eza` & `lsd`)
 - Lots of useful aliases (system, flatpak, DaVinci Resolve video conversion, etc.)
@@ -61,12 +59,6 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
 sudo apt update
 sudo apt install -y eza # p.s. eza can be in ubuntu/zorin/archnrepos
 
-# Alternative: lsd via snap (easy) p.s. I hate snaps do what you want
-sudo apt install -y snapd
-sudo snap install lsd
-
-# zplug (zsh plugin manager)
-sudo apt install -y zplug
 ```
 
 ### Papirus Icon Theme (highly recommended – beautiful, colorful, modern icons)
@@ -118,7 +110,7 @@ Dark minimal theme inspired by One Dark / Dracula vibes
 
 - Background:   `#242424`
 - Foreground:   `#ABB2BF`
-- Accent:  `#56B6C2`
+- Accent:       `#56B6C2`
 - Purple:       `#C678DD`
 - Green:        `#98C379`
 - Red:          `#E06C75`
@@ -128,7 +120,7 @@ Dark minimal theme inspired by One Dark / Dracula vibes
 ```bash
 # Quick view
 l           # beautiful detailed ls with dates (lsd)
-n           # fastfetch with custom config
+fcon        # fastfetch with custom config
 c           # clear
 
 # System
@@ -137,13 +129,6 @@ r / reboot  # reboot
 ram         # show RAM speed
 cpu         # show CPU model
 
-# Flatpak (if installed)
-fli         # flatpak install
-flr         # flatpak remove
-fl          # flatpak list
-
-# DaVinci Resolve video preparation
-dav         # convert all videos in current folder to davinci-compatible mov
 ```
 
 ## 💡 Recommendations
