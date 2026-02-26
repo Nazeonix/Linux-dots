@@ -42,6 +42,7 @@ alias sz='source ~/.zshrc'
 alias ls='eza --icons'
 alias l='lsd --date "+%d.%m.%Y %H:%M" -lah'
 
+eval "$(oh-my-posh init zsh)"
 # eval "$(starship init zsh)"
 
 
