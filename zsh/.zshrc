@@ -43,6 +43,14 @@ alias sz='source ~/.zshrc'
 alias ls='eza --icons'
 alias l='lsd --date "+%d.%m.%Y %H:%M" -lah'
 
+# History file config 
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+
+# Share history between all sessions
+setopt SHARE_HISTORY
+
 eval "$(oh-my-posh init zsh)"
 # eval "$(starship init zsh)"
 
