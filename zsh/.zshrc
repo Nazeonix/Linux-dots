@@ -1,5 +1,6 @@
 export TERM="xterm-256color"
-export PATH="$PATH:$HOME/.local/bin"
+path+="$HOME/.local/bin"
+export PATH
 [[ $XDG_SESSION_DESKTOP == plasma ]] && export KWIN_TRIPLE_BUFFER=1
 
 # Install plugins if missing
