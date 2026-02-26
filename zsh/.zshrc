@@ -8,7 +8,6 @@ if [[ ! -d ~/.zsh ]]; then
     git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.zsh/fast-syntax-highlighting
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
     curl -s https://ohmyposh.dev/install.sh | bash -s
-    
 fi
 
 # Plugins (autosuggestions → syntax is common order)
