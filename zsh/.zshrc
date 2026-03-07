@@ -1,6 +1,6 @@
 export TERM="xterm-256color"
-path+="$HOME/.local/bin"
-export PATH
+# path+="$HOME/.local/bin"
+# export PATH
 [[ $XDG_SESSION_DESKTOP == plasma ]] && export KWIN_TRIPLE_BUFFER=1
 
 # Install plugins if missing
@@ -51,7 +51,7 @@ SAVEHIST=100000
 # Share history between all sessions
 setopt SHARE_HISTORY
 
-eval "$(oh-my-posh init zsh)"
-# eval "$(starship init zsh)"
+# eval "$(oh-my-posh init zsh)"
+eval "$(starship init zsh)"
 
 
