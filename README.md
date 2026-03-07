@@ -2,6 +2,8 @@
 
 A fast and minimal **Zsh configuration** focused on productivity for **Arch Linux**, with useful aliases, lightweight plugins, and a modern prompt.
 
+![Terminal screenshot](term.png)
+
 ## ✨ Features
 
 * ⚡ Fast startup
@@ -196,8 +198,6 @@ This configuration aims to provide:
 * **powerful aliases**
 
 ---
-
-![Terminal screenshot](term.png)  
 
 ### 1. Dependencies (Debian/Ubuntu-based example)
 
