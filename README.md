@@ -1,28 +1,203 @@
-# My Terminal Setup – Zsh + Powerlevel10k + Alacritty
+# Minimal Zsh Configuration ⚡
 
-Modern, fast and beautiful terminal configuration for Linux  
-(zsh + Oh-My-Posh theme + Alacritty terminal)
-
-![Terminal screenshot](term.png)  
+A fast and minimal **Zsh configuration** focused on productivity for **Arch Linux**, with useful aliases, lightweight plugins, and a modern prompt.
 
 ## ✨ Features
-- Very fast syntax highlighting (`fast-syntax-highlighting`)
-- Modern icons in `ls` (`eza` & `lsd`)
-- Lots of useful aliases (system, flatpak, DaVinci Resolve video conversion, etc.)
-- Clean & minimal Alacritty theme with nice colors
-- FiraCode Nerd Font with ligatures
-- Semi-transparent window + no titlebar
 
-## 📂 What's inside
+* ⚡ Fast startup
+* 🧠 Command autosuggestions
+* 🎨 Syntax highlighting
+* 🚀 Modern prompt using Starship
+* 📦 Flatpak management aliases
+* 🐧 Pacman / AUR helper aliases
+* 📂 Useful Git shortcuts
+* 🖥 KDE Plasma optimizations
 
-```text
-📂 zsh.
-└──.zshrc
-📂 alacritty            # Main zsh configuration + Powerlevel10k + plugins
-└── alacritty.toml      # Alacritty terminal emulator settings
+---
+
+# 📦 Plugins
+
+This config automatically installs and loads:
+
+* **fast-syntax-highlighting** – Fast command syntax highlighting
+* **zsh-autosuggestions** – Fish-like command autosuggestions
+
+Plugins are stored inside:
+
+```
+~/.zsh/
 ```
 
-## 🚀 Installation
+---
+
+# 🚀 Prompt
+
+This setup uses **Starship** for a modern and fast prompt.
+
+Initialize with:
+
+```bash
+eval "$(starship init zsh)"
+```
+
+Optional prompt alternative:
+
+```
+oh-my-posh
+```
+
+---
+
+# 🧰 Included Aliases
+
+## Git
+
+```
+gs      git status
+gcm     git commit -m
+gco     git checkout
+gcob    git checkout -b
+gsw     git switch
+gp      git pull && git push
+gpl     git pull
+gf      git fetch --all --prune
+gundo   git reset --soft HEAD~1
+gst     git stash
+pop     git stash pop
+gstapp  git stash apply
+```
+
+---
+
+## Editor
+
+```
+vim     → nvim
+svim    → sudo nvim
+ez      → edit ~/.zshrc
+sz      → reload ~/.zshrc
+```
+
+---
+
+## File Listing
+
+Uses modern replacements for `ls`.
+
+```
+ls      eza --icons
+l       lsd -lah with date
+```
+
+---
+
+## Flatpak
+
+```
+fps     flatpak search
+fpi     flatpak install
+fpr     flatpak remove
+fpl     flatpak list
+fpu     flatpak update
+fpclean flatpak uninstall --unused
+fr      flatpak run
+```
+
+---
+
+## Pacman
+
+```
+pu      sudo pacman -Syu
+pi      sudo pacman -S
+pr      sudo pacman -Rns
+ps      pacman -Ss
+psi     pacman -Qs
+porphans remove orphan packages
+```
+
+---
+
+## AUR (yay)
+
+```
+yi      yay -S
+yu      yay -Syu
+ys      yay -Ss
+```
+
+---
+
+# 📜 History Configuration
+
+```
+HISTFILE = ~/.zsh_history
+HISTSIZE = 100000
+SAVEHIST = 100000
+```
+
+Shared history between all terminal sessions:
+
+```
+setopt SHARE_HISTORY
+```
+
+---
+
+# 🖥 KDE Optimization
+
+For smoother compositing on KDE Plasma:
+
+```
+export KWIN_TRIPLE_BUFFER=1
+```
+
+---
+
+# 📥 Installation
+
+Clone the repository:
+
+```
+git clone https://github.com/Nazeonix/Linux-dots.git 
+```
+
+Copy configuration:
+
+```
+cp .zshrc ~/.zshrc
+```
+
+Restart shell:
+
+```
+source ~/.zshrc
+```
+
+---
+
+# 📁 Directory Structure
+
+```
+~/.zsh
+ ├── fast-syntax-highlighting
+ └── zsh-autosuggestions
+```
+
+---
+
+# 🎯 Goals
+
+This configuration aims to provide:
+
+* a **fast shell**
+* a **clean developer environment**
+* **minimal dependencies**
+* **powerful aliases**
+
+---
+
+![Terminal screenshot](term.png)  
 
 ### 1. Dependencies (Debian/Ubuntu-based example)
 
@@ -81,28 +256,11 @@ wget -qO- https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9461999446FAF0
 sudo apt update
 sudo apt install papirus-icon-theme
 ```
-
-After installation → open **GNOME Tweaks** (`sudo apt install gnome-tweaks`), go to **Appearance → Icons**, and select **Papirus** / **Papirus-Dark**.
-
-### 2. Install the terminal configuration
-
+**For Arch cons ❤️**
 ```bash
-# Backup existing configs (recommended!)
-cp ~/.zshrc ~/.zshrc.bak 2>/dev/null || true
-mkdir -p ~/.config/alacritty
-cp ~/.config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml.bak 2>/dev/null || true
-
-# Copy new files
-cp .zshrc ~/.zshrc
-cp alacritty.toml ~/.config/alacritty/alacritty.toml
-
-# Set zsh as default shell
-chsh -s /usr/bin/zsh
-
-# Restart terminal or run:
-exec zsh
-# → zplug will auto-install plugins on first launch
+sudo pacman -S eza starship ttf-meslo-nerd papirus-icon-theme --needed
 ```
+After installation → open **GNOME Tweaks** (`sudo apt install gnome-tweaks`), go to **Appearance → Icons**, and select **Papirus** / **Papirus-Dark**.
 
 ## 🎨 Color Scheme
 
@@ -114,22 +272,6 @@ Dark minimal theme inspired by One Dark / Dracula vibes
 - Purple:       `#C678DD`
 - Green:        `#98C379`
 - Red:          `#E06C75`
-
-## Useful aliases you will get
-
-```bash
-# Quick view
-l           # beautiful detailed ls with dates (lsd)
-fcon        # fastfetch with custom config
-c           # clear
-
-# System
-son         # suspend
-r / reboot  # reboot
-ram         # show RAM speed
-cpu         # show CPU model
-
-```
 
 ## 💡 Recommendations
 
