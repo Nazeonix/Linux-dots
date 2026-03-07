@@ -280,6 +280,6 @@ Dark minimal theme inspired by One Dark / Dracula vibes
 - Update Papirus regularly: `sudo apt update && sudo apt upgrade papirus-icon-theme`
 - Enjoy your clean & glowing terminal! 🚀
 
-Happy hacking on Debian-based Linux and you can do it on any distro! 😄
+Happy hacking on Debian and Arch based Linux and you can do it on any distro! 😄
 ```
 🇺🇦-version soon
