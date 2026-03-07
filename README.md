@@ -1,7 +1,7 @@
 # Minimal Zsh Configuration ⚡
 
 A fast and minimal **Zsh configuration** focused on productivity for **Arch Linux**, with useful aliases, lightweight plugins, and a modern prompt.
-
+<kbd>[<img title="Ukraine" alt="Ukraine" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/1280px-Flag_of_Ukraine.svg.png" width="22">](docs/README.uk.md)</kbd>
 ![Terminal screenshot](term.png)
 
 ## ✨ Features
