@@ -1,6 +1,4 @@
 export TERM="xterm-256color"
-# path+="$HOME/.local/bin"
-# export PATH
 [[ $XDG_SESSION_DESKTOP == plasma ]] && export KWIN_TRIPLE_BUFFER=1
 
 # Install plugins if missing
@@ -8,7 +6,7 @@ if [[ ! -d ~/.zsh ]]; then
     mkdir -p ~/.zsh
     git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.zsh/fast-syntax-highlighting
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-    curl -s https://ohmyposh.dev/install.sh | bash -s
+    # curl -s https://ohmyposh.dev/install.sh | bash -s # only if you want some "sparks"
 fi
 
 # Plugins (autosuggestions → syntax is common order)
@@ -43,15 +41,38 @@ alias sz='source ~/.zshrc'
 alias ls='eza --icons'
 alias l='lsd --date "+%d.%m.%Y %H:%M" -lah'
 
-# History file config 
+# ─── History file config ───────────────────────────────────────────────
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
-
-# Share history between all sessions
 setopt SHARE_HISTORY
 
-# eval "$(oh-my-posh init zsh)"
+# ─── Flatpak alias ─────────────────────────────────────────────────────
+alias fps='flatpak search'
+alias fpi='flatpak install'
+alias fpr='flatpak remove'
+alias fpl='flatpak list'
+alias fpu='flatpak update'
+alias fpclean='flatpak uninstall --unused'
+alias fr='flatpak run'
+
+# ─── Pacman alias ──────────────────────────────────────────────────────
+alias pi='sudo pacman -S'
+alias pr='sudo pacman -Rns'
+alias ps='pacman -Ss'
+alias psi='pacman -Qs'
+alias porphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias pu='sudo pacman -Syu'
+alias pi='sudo pacman -S'
+alias pr='sudo pacman -Rns'
+alias ps='pacman -Ss'
+alias psi='pacman -Qs'
+alias porphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias yi='yay -S'
+alias yu='yay -Syu'
+alias ys='yay -Ss'
+
+# eval "$(oh-my-posh init zsh)" # Read 9 line
 eval "$(starship init zsh)"
 
 
