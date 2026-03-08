@@ -40,8 +40,12 @@ This setup uses **Starship** for a modern and fast prompt.
 
 Initialize with:
 
-```bash
+```vim or nano in .zshrc
 eval "$(starship init zsh)"
+```
+
+```copy config of starship
+sudo cp startship.toml ~/.config/starship.toml
 ```
 
 Optional prompt alternative:
