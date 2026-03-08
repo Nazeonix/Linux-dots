@@ -284,4 +284,4 @@ Dark minimal theme inspired by One Dark / Dracula vibes
 
 Happy hacking on Debian and Arch based Linux and you can do it on any distro! 😄
 ```
-🇺🇦-version soon
+🇩🇪 and 🇵🇱-version soon
