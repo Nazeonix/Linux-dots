@@ -44,6 +44,9 @@
 eval "$(starship init zsh)"
 ```
 
+```скопіюйте конфігурацію starship
+sudo cp startship.toml ~/.config/starship.toml
+```
 Альтернативний промпт (опціонально):
 
 ```
