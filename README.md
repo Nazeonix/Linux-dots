@@ -4,7 +4,7 @@ A fast and minimal **Zsh configuration** focused on productivity for **Arch Linu
 
 <kbd>[<img title="Ukraine" alt="Ukraine" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/1280px-Flag_of_Ukraine.svg.png" width="22">](README.uk.md)</kbd>
 
-![Terminal screenshot](term.png)
+![Terminal screenshot](termianl.png)
 
 ## ✨ Features
 
